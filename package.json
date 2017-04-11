@@ -43,7 +43,7 @@
         "passport-twitter":"*"
     },
     "engines": {
-        "node": "0.10.x"
+        "node": ">0.10.x"
     },
     "config": {
         "engine-strict": true

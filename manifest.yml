@@ -5,7 +5,7 @@ applications:
   - foosbuzz-IoT
   memory: 512M
   instances: 1
-  domain: mybluemix.net
+  domain: eu-gb.mybluemix.net
   name: foosbuzz
   host: foosbuzz
   disk_quota: 1024M
