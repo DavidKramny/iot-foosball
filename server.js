@@ -54,9 +54,9 @@ var team = 1;
 
 // Update the credentials with the information from your Twitter app 
 passport.use(new Strategy({
-    consumerKey: "TWITTER CONSUMER KEY",
-    consumerSecret: "TWITTER CONSUMER SECRET",
-    callbackURL: "http://yourwebsite.com/login/twitter/return"
+    consumerKey: "vyj1VvBQpjDPechsqAS24GNl9", // "foosbuzz_cz" Twitter account
+    consumerSecret: "rNJKw6dyNCnSSO4vSYDCmK0PPezmRD3309FUeusr08EulZtuYh", 
+    callbackURL: "http://foosbuzz.eu-gb.mybluemix.net/login/twitter/return"
   },
   function(token, tokenSecret, player, cb) {
     
@@ -71,7 +71,7 @@ passport.use(new Strategy({
 	   headers: { "Content-Type": "application/json" }
 	};
 	   
-	client.post("http://yourwebsite.com/player", args, function (data, response) {
+	client.post("http://foosbuzz.eu-gb.mybluemix.net/player", args, function (data, response) {
 		//console.log(data);
 		//console.log(response);
 	});
@@ -129,7 +129,7 @@ var settings = {
         type: "credentials",
         users: [{
             username: "admin",
-            password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
+            password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.", // "password"
             permissions: "*"
         }]
     },
