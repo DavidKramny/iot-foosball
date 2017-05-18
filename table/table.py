@@ -40,27 +40,27 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # setup callbacks for sensors
 def sensor1_callback(gpio_id):
-  data = 1
+  data = {'data': 1}
   print "Goal Team 1"
-  table.publishEventOverHTTP("status",data)    
+  table.publishEvent("status", "json", data)    
   sleep(0.4)
 
 def sensor2_callback(gpio_id):
-  data = 2
+  data = {'data': 2}
   print "Goal Team 2"
-  table.publishEventOverHTTP("status",data)
+  table.publishEvent("status", "json", data)
   sleep(0.4)
 
 def button_callback(gpio_id):
-  data = 0
+  data = {'data': 0}
   print "Reset button pushed"
-  table.publishEventOverHTTP("status",data)
+  table.publishEvent("status", "json", data)
 
 try:
     options = {"org":org,"type":type,"id":id,"auth-method":method,"auth-token":token}
-    table = ibmiotf.device.Client(options)
+    table = ibmiotf.device.HttpClient(options)
     table.connect()
-    table.setMessageEncoderModule('json',jsonIotfCodec)
+    #table.setMessageEncoderModule('json',jsonIotfCodec)
     table.logger.setLevel(logging.INFO)
 
     # Set up rising edge detection on pins
