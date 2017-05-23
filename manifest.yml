@@ -5,7 +5,7 @@ applications:
    - praguefoozballiot-iotf-service
   memory: 512M
   instances: 1
-  domain: eu-gb.mybluemix.net
+  domain: mybluemix.net
   host: prague-foosbuzz
   name: prague-foosbuzz
   disk_quota: 1024M
