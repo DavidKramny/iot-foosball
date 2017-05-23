@@ -1,13 +1,13 @@
 applications:
 - services:
-  - foosbuzz-cloudantNoSQLDB
-  - foosbuzz-textToSpeech
-  - foosbuzz-IoT
+   - praguefoosball-nodered-cloudNoSQLDB
+   - text_to_speech_praguefoosbuzz
+   - praguefoozballiot-iotf-service
   memory: 512M
   instances: 1
   domain: eu-gb.mybluemix.net
-  name: foosbuzz
-  host: foosbuzz
+  host: prague-foosbuzz
+  name: prague-foosbuzz
   disk_quota: 1024M
 
 declared-services:
